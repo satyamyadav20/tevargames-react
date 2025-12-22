@@ -1,0 +1,332 @@
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*:root {*/
+/*  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, Hiragino Sans GB, Microsoft Yahei, sans-serif;*/
+/*  line-height: 1.5;*/
+/*  font-weight: 400;*/
+
+/*  color-scheme: dark;*/
+/*  color: rgba(255, 255, 255, 0.87);*/
+/*  background-color: #000000;*/
+
+/*  font-synthesis: none;*/
+/*  text-rendering: optimizeLegibility;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*  -webkit-tap-highlight-color: transparent;*/
+
+/*  !* CSS Variables from original *!*/
+/*  --main-color: #FFD700;*/
+/*  --main_gradient-color: linear-gradient(90deg, #FFD700 0%, #FFCC00 100%);*/
+/*  --main_gradient-color2: linear-gradient(180deg, #2AAAF3 0%, #2979F2 100%);*/
+/*  --light-main_gradient-color: linear-gradient(90deg, #b1835a, #d4af37, #b1835a);*/
+/*  --norm_red-color: #D23838;*/
+/*  --norm_green-color: #17B15E;*/
+/*  --norm_secondary-color: #DD9138;*/
+/*  --norm_Purple-color: #9B48DB;*/
+/*  --norm_bule-color: #5088D3;*/
+/*  --button_dis_color: #454456;*/
+/*  --text_color_L1: #FFFFFF;*/
+/*  --text_color_L2: #ACAFC2;*/
+/*  --text_color_L3: #757BA6;*/
+/*  --text_color_L4: #FFFFFF;*/
+/*  --bg_color_L1: #000000;*/
+/*  --bg_color_L2: #1a1a1a;*/
+/*  --bg_color_L3: #374992;*/
+/*  --Dividing-line_color: #374992;*/
+/*  --sheet_nva_color: #374992;*/
+/*  --sheet_detail_bg_color: #2B3270;*/
+/*}*/
+
+/*html {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background: var(--bg_color_L1);*/
+/*}*/
+
+/*body {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  min-height: 100vh;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  overflow-x: hidden;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  background-color: #9195a3;*/
+/*}*/
+
+/*#root {*/
+/*  width: 100%;*/
+/*  max-width: 400px;*/
+/*  height: fit-content;*/
+/*  min-height: 100vh;*/
+/*  background: var(--bg_color_L1);*/
+/*}*/
+
+/*@media screen and (max-width: 500px) {*/
+/*  body {*/
+/*    background-color: var(--bg_color_L1);*/
+/*  }*/
+
+/*  #root {*/
+/*    width: 100%;*/
+/*    max-width: 100%;*/
+/*    min-height: 100vh;*/
+/*  }*/
+
+/*  #root::-webkit-scrollbar {*/
+/*    width: 0;*/
+/*    background: transparent;*/
+/*  }*/
+/*}*/
+
+/*a {*/
+/*  font-weight: 500;*/
+/*  color: var(--main-color);*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*a:hover {*/
+/*  opacity: 0.8;*/
+/*}*/
+
+/*button {*/
+/*  font-family: inherit;*/
+/*  cursor: pointer;*/
+/*  outline: none;*/
+/*  -webkit-tap-highlight-color: transparent;*/
+/*}*/
+
+/*input, select, textarea {*/
+/*  font-family: inherit;*/
+/*  -webkit-appearance: none;*/
+/*  -moz-appearance: none;*/
+/*  appearance: none;*/
+/*  -webkit-user-select: text;*/
+/*  user-select: text;*/
+/*  color: var(--text_color_L1);*/
+/*}*/
+
+/*input:focus {*/
+/*  outline: .01333rem solid var(--Dividing-line_color);*/
+/*}*/
+
+/*!* Remove autofill background color *!*/
+/*input:-webkit-autofill,*/
+/*input:-webkit-autofill:hover,*/
+/*input:-webkit-autofill:focus,*/
+/*input:-webkit-autofill:active {*/
+/*  -webkit-box-shadow: 0 0 0 30px var(--bg_color_L2) inset !important;*/
+/*  -webkit-text-fill-color: var(--text_color_L1) !important;*/
+/*}*/
+
+@charset "UTF-8";
+
+/* =====================
+   ROOT & THEME
+===================== */
+:root {
+  /* Brand */
+  --main-color: #FFD700;
+  --main-gradient: linear-gradient(90deg, #FFD700 0%, #FFCC00 100%);
+  --main-gradient-vertical: linear-gradient(180deg, #2AAAF3 0%, #2979F2 100%);
+
+  /* Text */
+  --text_color_L1: #FFD700;
+  --text_color_L2: #ACAFC2;
+  --text_color_L3: #757BA6;
+  --text_color_L4: #000000;
+
+  /* Backgrounds */
+  --bg_color_L1: #000000;
+  --bg_color_L2: #000000;
+  --bg_color_L3: #374992;
+
+  /* Utility */
+  --divider-color: #374992;
+}
+
+/* =====================
+   RESET
+===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg_color_L1);
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =====================
+   REM BASE (important)
+===================== */
+html {
+  font-size: 40px; /* desktop / design base */
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 16px; /* mobile */
+  }
+}
+
+
+
+
+/* =====================
+   LAYOUT
+===================== */
+body {
+  display: flex;
+  justify-content: center;
+  background: #9195a3;
+}
+
+#root {
+  width: 10rem;
+  min-height: 100vh;
+  background: var(--bg_color_L1);
+}
+
+@media (max-width: 500px) {
+  body {
+    background: var(--bg_color_L1);
+  }
+
+  #root {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 2.5rem !important
+  }
+}
+
+/* =====================
+   TEXT & LINKS
+===================== */
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* =====================
+   INPUTS
+===================== */
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: var(--text_color_L1);
+  background: var(--bg_color_L2);
+  border: none;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--divider-color);
+}
+
+/* Remove number arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* =====================
+   COMMON UTILITIES
+===================== */
+.c-row {
+  display: flex;
+}
+
+.c-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 0.266rem;
+}
+
+.mb-10 {
+  margin-bottom: 0.266rem;
+}
+
+/* =====================
+   COMPONENT BASES
+===================== */
+.header {
+  background: var(--bg_color_L3);
+  color: var(--text_color_L1);
+}
+
+.footer {
+  background: var(--bg_color_L3);
+}
+
+.btn-primary {
+  background: var(--main-gradient);
+  color: var(--text_color_L4);
+  border-radius: 0.333rem;
+  padding: 0.2rem 0.4rem;
+  font-weight: 700;
+}
+
+/* =====================
+   SCROLLBAR (optional)
+===================== */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
