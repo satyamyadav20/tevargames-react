@@ -124,17 +124,14 @@ const Login = () => {
 
             <div>
               <div
-                role="checkbox"
-                className={`van-checkbox ${rememberPassword ? 'van-checkbox--checked' : ''}`}
-                tabIndex={0}
-                aria-checked={rememberPassword}
-                onClick={() => setRememberPassword(!rememberPassword)}
+                  role="checkbox"
+                  className={`van-checkbox ${rememberPassword ? 'van-checkbox--checked' : ''}`}
+                  onClick={() => setRememberPassword(!rememberPassword)}
               >
-                <div className={`van-checkbox__icon van-checkbox__icon--round ${rememberPassword ? 'van-checkbox__icon--checked' : ''}`}>
-                  <i className="van-badge__wrapper van-icon van-icon-success"></i>
-                </div>
+                <div className="van-checkbox__icon van-checkbox__icon--round"></div>
                 <span className="van-checkbox__label">Remember password</span>
               </div>
+
             </div>
 
             <div className="signIn__container-button">
